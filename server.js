@@ -10,7 +10,7 @@ const PORT = 5000;
 const bookingsFilePath = path.join(__dirname, "data", "bookings.json");
 
 // Middleware
-app.use(cors()); // Enable CORS
+app.use(cors({ origin: "*" })); // Enable CORS
 // app.use(cors({ origin: "https://restaurant-booking-6sdr.vercel.app/" })); // replace with your frontend URL
 
 app.use(express.json()); // Parse JSON request bodies
